@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep and Shallow Copy</title>
+</head>
+<body>
+    <h1>Deep and Shallow Copy</h1>
+    <script>
+        // let obj1={
+        //     Name:"Saad Jhujh",
+        //     Age:23
+        // }
+        // let obj2=obj1 //refernce of obj1 assigned to obj2
+        // obj2.Name="Sallahuddin"
+        // console.log(obj1);
+
+
+        //shallow copy
+        // let obj1={
+        //     Name:"Saad Jhujh",
+        //     Age:23
+        // }
+        // let obj2=Object.assign({},obj1) value of obj1 assigned to obj2
+        // let obj2={...obj1} //refernce of obj1 assigned to obj2
+        // obj2.Name="Sallahuddin"
+        // console.log(obj1);
+
+
+        //deep copy
+        let obj1={
+            Name:"Saad Jhujh",
+            Age:23,
+            Address:{
+                City:"Hujra Shah Muqeem",
+                Village:"Jhujh Kalan"
+            }
+        }
+        let obj2=JSON.parse(JSON.stringify(obj1)) //value of obj1 assigned to obj2
+        obj2.Address.City="Okara"
+        console.log(obj1);
+        console.log(obj2);
+
+
+    </script>
+</body>
+</html>
